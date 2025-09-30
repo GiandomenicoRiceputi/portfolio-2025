@@ -1,0 +1,62 @@
+---
+title: Projects
+permalink: /projects/index.html
+description: "Projects and experiments."
+layout: page
+sizes: "(max-width: 615px) 50vw, 100vw"
+widths: [400, 520]
+---
+
+<p>
+  In my projects, you'll find a collection of experiments
+  and practical applications where I try out new ideas. These aren't perfect
+  solutions, but rather my ongoing attempts to better understand accessibility
+  challenges and front-end techniques. Each card represents something I've
+  learned along the way—sometimes what worked, sometimes what didn't—but always
+  with the goal of making the web a bit more inclusive.
+</p>
+
+<article class="full section" style="--spot-color: var(--color-bg-accent)">
+  {% svg "divider/soft-top", null, "divider" %}
+
+  <section class="feature section__inner wrapper">
+    <h2>Featured Projects:</h2>
+    <div
+      class="feature grid region"
+      style="
+        --region-space-top: var(--space-xl);
+        --gutter: var(--space-xl) var(--space-xs);
+      "
+    >
+      <!-- you find tha data for that in src/_data/projects.json -->
+      {% for site in projects | shuffle %}
+      <custom-card
+        clickable
+        img-square
+        class="text-step-min-1"
+        style="--card-bg: var(--color-bg)"
+      >
+        {% image "./src/assets/images/screenshots/" + site.filename + ".jpg",
+        site.name, null, "lazy", null, null, widths, sizes %}
+        <h3 slot="headline" class="text-step-min-1">{{ site.name }}</h3>
+
+        <p slot="content">{{ site.description }}</p>
+        <footer slot="footer" class="repel">
+          <a class="no-indicator" href="{{ site.link }}"
+            >{{ site.link | replace("https://", "") }}</a
+          >
+          {% if site.buildByAccessibilityBubbles %}
+          <span class="gradient-text-linear"
+            >built by Accessibility Bubbles</span
+          >
+          {% endif %}
+        </footer>
+      </custom-card>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% svg "divider/soft-bottom", null, "divider" %}
+</article>
+
+{% css "local" %} {% include "css/custom-card.css" %} {% endcss %}

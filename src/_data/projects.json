@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Slick slices",
+    "description": "Pizzeria.",
+    "filename": "IrisPizza",
+    "link": "https://irispizzas.netlify.app/",
+    "buildByAccessibilityBubbles": true
+  },
+  {
+    "name": "Covid traker",
+    "description": "Covid map.",
+    "filename": "covid traker",
+    "link": "https://covid-traker-react-giandodev.vercel.app/",
+  "buildByAccessibilityBubbles": true
+  },
+  {
+    "name": "Donuts",
+    "description": "Play with threejs.",
+    "filename": "3d donuts",
+    "link": "https://dounuts.vercel.app/",
+     "buildByAccessibilityBubbles": true
+  }
+
+]

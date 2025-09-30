@@ -1,0 +1,48 @@
+---
+layout: base
+permalink: /index.html
+title: "Accessibility Bubbles"
+description: "A personal portfolio blog about accessibility and CSS."
+blog:
+  title: "Blog"
+  intro: "I'm writing and experimenting about accessibility and CSS stuff, let's have fun!"
+---
+
+<div class="wrapper">
+  <header class="full | section" style="--spot-color: var(--color-primary)">
+    <div class="section__inner flow region">
+      <h1 class="text-center" style="color: var(--color-light)">{{ title }}</h1>
+    </div>
+    {% svg "divider/waves", null, "divider" %}
+  </header>
+
+<article class="full | region">
+    <div class="wrapper flow prose">
+      <h2 id="an-eleventy-starter">
+        Giandomenico Riceputi: Where accessibility bubbles up.
+      </h2>
+      <p>
+        I believe the web should be a place for everyone. I'm a developer exploring ways to blend creative front-end approaches with thoughtful accessibility practices. Here at Accessibility Bubbles, I share that learning journey with you. You'll find my experiments with CSS, notes on ARIA and semantic HTML, and reflections from projects I've worked on. This space represents my ongoing commitment to learning how we can build better, more inclusive websites together.
+      </p>
+      <p>
+        <strong>I'd love to have you along</strong> if you're also curious about creating beautiful, functional web experiences that welcome everyone.
+      </p>
+    </div>
+</article>
+
+  <section class="full | region">
+    <div class="wrapper flow prose">
+      <h2>{{ blog.title }}</h2>
+      {% if blog.intro %}
+      <p>{{ blog.intro }}</p>
+      {% endif %}
+      <div class="feature | region region-space-l">
+        <custom-masonry layout="50-50">
+          {% set itemList = collections.allPosts %} {% asyncEach item in
+          itemList.slice(0, 4) %} {% set headingLevel = "h3" %} {% include
+          "partials/card-blog.njk" %} {% endeach %}
+        </custom-masonry>
+      </div>
+    </div>
+  </section>
+</div>
