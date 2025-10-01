@@ -24,9 +24,9 @@ export const pathToSvgLogo = 'src/assets/svg/misc/logo.svg'; // used for favicon
 export const themeColor = '#ff4e16'; // used in manifest, for example primary color value
 export const themeLight = '#f8f8f8'; // used for meta tag theme-color, if light colors are prefered. best use value set for light bg
 export const themeDark = '#4b4eff'; // used for meta tag theme-color, if dark colors are prefered. best use value set for dark bg
-export const opengraph_default = '/assets/images/template/opengraph-default.jpg'; // fallback/default meta image
+export const opengraph_default = '/assets/images/template/accessibility-bubbles-share.jpg'; // fallback/default meta image
 export const opengraph_default_alt =
-  "Visible content: My personal portfolio blog about accessibility and CSS."; // alt text for default meta image"
+  'Illustrated pastel bubbles surrounding the Accessibility Bubbles wordmark on a soft gradient background.'; // alt text for default meta image"
 export const blog = {
   name: 'My Web Development Blog',
   description: 'Tell the world what you are writing about in your blog. This text appears in metadata snippets.',
