@@ -19,6 +19,13 @@
     "filename": "3d donuts",
     "link": "https://dounuts.vercel.app/",
      "buildByAccessibilityBubbles": true
+  },
+  {
+    "name": "Mansory gallery",
+    "description": "I use ReactJS to build a simple mansory gallery.",
+    "filename": "Mansory gallery",
+    "link": "https://accessibilitybubbles.com/",
+    "buildByAccessibilityBubbles": true
   }
 
 ]
